@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product list with cart</title>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="body">
+  <div class="body_main">
+  <div class="body_dessert-list">
+    <h1 class="desert-list_heading page_title--animate">Desserts</h1>
+    <div class="desert-list_products">
+
+      <!-- Product-item_1 -->
+      <div class="products_item product_item--animate" data-name="Waffle with berries" data-price="6.50" data-image="assets/images/image-waffle-thumbnail.jpg">
+        <picture>
+          <source media="(min-width:1224px)" srcset="assets/images/image-waffle-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-waffle-tablet.jpg">
+          <img src="assets/images/image-waffle-mobile.jpg" alt="Waffle with berries" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg" >
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Waffle</p>
+        <p class="item-info_name">Waffle with Berries</p>
+        <p class="item-info_price">$6.50</p>
+        </div>
+      </div>
+      
+      <!-- Product-item_2 -->
+      <div class="products_item product_item--animate" data-name="Vanilla Bean Crème Brûlée" data-price="7.00" data-image="assets/images/image-creme-brulee-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-creme-brulee-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-creme-brulee-tablet.jpg">
+          <img src="assets/images/image-creme-brulee-mobile.jpg" alt="Vanilla Bean Crème Brûlée" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Crème Brûlée</p>
+        <p class="item-info_name">Vanilla Bean Crème Brûlée</p>
+        <p class="item-info_price">$7.00</p>
+        </div>
+      </div>
+
+      <!-- Product-item_3 -->
+      <div class="products_item product_item--animate" data-name="Macaron Mix of Five" data-price="8.00"
+      data-image="assets/images/image-macaron-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-macaron-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-macaron-tablet.jpg">
+          <img src="assets/images/image-macaron-mobile.jpg" alt="Macaron Mix of Five" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Macaron</p>
+        <p class="item-info_name">Macaron Mix of Five</p>
+        <p class="item-info_price">$8.00</p>
+        </div>
+      </div>
+
+      <!-- Product-item_4 -->
+      <div class="products_item product_item--animate" data-name="Classic Tiramisu" data-price="5.50" data-image="assets/images/image-tiramisu-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-tiramisu-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-tiramisu-tablet.jpg">
+          <img src="assets/images/image-tiramisu-mobile.jpg" alt="Classic Tiramisu" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Tiramisu</p>
+        <p class="item-info_name">Classic Tiramisu</p>
+        <p class="item-info_price">$5.50</p>
+        </div>
+      </div>
+
+      <!-- Product-item_5 -->
+      <div class="products_item product_item--animate" data-name="Pistachio Baklava" data-price="4.00" data-image="assets/images/image-baklava-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-baklava-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-baklava-tablet.jpg">
+          <img src="assets/images/image-baklava-mobile.jpg" alt="Pistachio Baklava" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Baklava</p>
+        <p class="item-info_name">Pistachio Baklava</p>
+        <p class="item-info_price">$4.00</p>
+        </div>
+      </div>
+
+      <!-- Product-item_6 -->
+      <div class="products_item product_item--animate" data-name="Lemon Meringue Pie" data-price="5.00" data-image="assets/images/image-meringue-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-meringue-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-meringue-tablet.jpg">
+          <img src="assets/images/image-meringue-mobile.jpg" alt="Lemon Meringue Pie" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Pie</p>
+        <p class="item-info_name">Lemon Meringue Pie</p>
+        <p class="item-info_price">$5.00</p>
+        </div>
+      </div>
+
+      <!-- Product-item_7 -->
+      <div class="products_item product_item--animate" data-name="Red Velvet Cake" data-price="4.50" data-image="assets/images/image-cake-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-cake-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-cake-tablet.jpg">
+          <img src="assets/images/image-cake-mobile.jpg" alt="Red Velvet Cake" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Cake</p>
+        <p class="item-info_name">Red Velvet Cake</p>
+        <p class="item-info_price">$4.50</p>
+        </div>
+      </div>
+
+      <!-- Product-item_8 -->
+      <div class="products_item product_item--animate" data-name="Salted Caramel Brownie" data-price="5.50" data-image="assets/images/image-brownie-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-brownie-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-brownie-tablet.jpg">
+          <img src="assets/images/image-brownie-mobile.jpg" alt="Salted Caraamel Brownie" class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Brownie</p>
+        <p class="item-info_name">Salted Caraamel Brownie</p>
+        <p class="item-info_price">$5.50</p>
+        </div>
+      </div>
+
+      <!-- Product-item_9 -->
+      <div class="products_item product_item--animate" data-name="Vanilla Panna Cotta" data-price="6.50" data-image="assets/images/image-panna-cotta-thumbnail.jpg">
+        <picture >
+          <source media="(min-width:1224px)" srcset="assets/images/image-panna-cotta-desktop.jpg">
+          <source media="(min-width:768px)" srcset="assets/images/image-panna-cotta-tablet.jpg">
+          <img src="assets/images/image-panna-cotta-mobile.jpg" alt="Vanilla Panna Cotta"  class="item_picture">
+        </picture>
+        <button class="item_button">
+          <img src="assets/images/icon-add-to-cart.svg">
+          <span class="button_text">Add to Cart</span>
+        </button>
+        <div class="item_quantity-controls hidden">
+          <button class="qty_btn qty_minus" type="button">-</button>
+          <span class="qty_value"></span>
+          <button class="qty_btn qty_plus" type="button">+</button>
+        </div>
+        <div class="item_item-info">
+        <p class="item-info_type">Panna Cotta</p>
+        <p class="item-info_name">Vanilla Panna Cotta</p>
+        <p class="item-info_price">$6.50</p>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+
+
+    <!-- CART -->
+    <div class="body_cart body_cart--animate">
+      <h2 class="cart_heading">Your Cart (<span class="cart_count">0</span>)</h2>
+      <div class="cart_empty">
+        <img src="assets/images/illustration-empty-cart.svg" class="empty_picture">
+        <p class="empty_text">Your added items will appear here</p>
+      </div>
+      <div class="cart_items"></div>
+      <template id="cart-item-template">
+        <div class="cart_item">
+          <div class="cart_item-details">
+          <p class="cart_item-name"></p>
+          <div class="cart_item-values">
+
+            <span class="cart_item-qty"></span><span class="cart_item-style">x</span>
+
+            <span class="cart_item-unit-style">@ $</span><span class="cart_item-unit-price"></span>
+
+            <span class="cart_item-total-style">$</span><span class="cart_item-total-price cart_item-total-style"></span>
+             
+          </div>
+          </div>
+          <div class="cart_item-controls">
+            <button class="cart_item-remove">
+              <!-- <img src="assets/images/icon-remove-item.svg" class="item-remove_icon"> -->
+              <span class="item-remove_icon">✕</span>
+            </button>
+          </div>
+        </div>
+      </template>
+      <div class="cart_total hidden">
+        <span class="total_text">Order Total</span>
+        <div class="total_text-container"><span class="total_price-style">$</span><span class="total_price"></span>
+      </div></div>
+      <div class="cart_carbon-neutral hidden">
+        <img src="assets/images/icon-carbon-neutral.svg" class="carbon-neutral_icon">
+        <span class="carbon-neutral_text">This is a <strong class="carbon-neutral_strong">carbon-neutral</strong> delivery</span>
+      </div>
+      <div class="cart_confirmation">
+        <button class="confirmation_button hidden">Confirm Order</button>
+      </div>
+    </div>
+    
+    <div class="overlay hidden">
+      <div class="order-confirmed">
+        <div class="order-confirmed_hero">
+          <img src="assets/images/icon-order-confirmed.svg" class="hero_icon">
+          <div class="hero_text">
+            <h2 class="hero_heading">Order<br> Confirmed</h2>
+            <p class="hero_subheading">We hope you enjoy your food!</p>
+          </div>  
+        </div>
+        <div class="order-confirmed_details">
+          <div class="order-confirmed_items"></div>
+          
+          <div class="order-confirmed_total">
+            <span class="order-confirmed_total-text">Order Total</span>
+            <div><span class="order-confirmed_total-icon">$</span><span class="order-confirmed_total-price">$99.67</span></div>
+          </div>
+        </div>
+        <button class="order-confirmed_start-new-order">Start New Order</button>
+      </div>
+    </div>
+
+    <template id="order-confirmed_template">
+      <div class="confirmation-item">
+      <div class="template_product-info">
+        <img src="assets/images/image-tiramisu-thumbnail.jpg" class="product-info_image">
+        <div class="product-info_details">
+          <p class="product-info_name"></p>
+          <div class="details_values">
+            <span class="details_qty"></span><span class="cart_item-style">x</span>
+            <span class="cart_item-unit-style">@ $</span><span class="details_unit-price"></span>
+          </div>
+        </div>
+      </div>
+      <div><span class="template_total-product-price_icon">$</span><span class="template_total-product-price"></span>
+      </div>
+      </div>
+    </template>
+
+
+
+  </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Denis</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+</html>
