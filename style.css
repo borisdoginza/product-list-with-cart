@@ -119,6 +119,8 @@ button {
     border-radius: 12px;
     opacity: 0;
     transform: translateX(30px);
+    box-sizing: border-box;
+    max-width: 327px;
     /* animation: fadeInSlideRight 0.5s ease forwards; */
     /* animation-delay: 0.2s; */
 }
@@ -167,6 +169,9 @@ button {
         width: 160px;
         height: 44px;
         padding: 0;
+    }
+    .body_cart{
+        max-width: 100%;
     }
     
 
@@ -457,11 +462,12 @@ body.modal-open {
     height: auto;
     max-height: 552px;
     position: relative;
-    top: 40px;
+    top: 90px;
 
     display: flex; 
     flex-direction: column;
     gap: 32px;
+    transition: all 0.2s ease;
 
     /* Firefox */
   scrollbar-width: thin;
