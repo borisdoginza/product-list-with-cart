@@ -7,7 +7,7 @@ const totalPriceElement = document.querySelector(".total_price");
 // const clone = template.content.cloneNode(true);
 // cartItemsContainer.appendChild(clone);
 
-// Функция для обновления общей цены в корзине и количества товаров
+// Function for updating the total price in the cart and the quantity of products
 function updateCartSummary() {
     let totalCount = 0;
     let totalPrice = 0;
@@ -47,8 +47,6 @@ confirmationButton.addEventListener("click", () => {
 
     const orderConfirmed = document.querySelector(".order-confirmed");
     orderConfirmed.classList.add("order-confirmed--animate");
-
-    // Нужно сделать скролл модального окна наверх при открытие что его было вижно полностью, а не с середины, если пользователь был внизу страницы при клике на кнопку "Confirm Order"
     const modalContent = document.querySelector(".order-confirmed");
     modalContent.scrollTo({
         top: 0,
@@ -128,7 +126,9 @@ overlay.addEventListener("click", () => {
 });
 
 
-// Функция для ресета корзины после нажатия на кнопку "Start New Order"
+// Function for resetting the shopping cart after clicking the "Start New Order" button
+
+
 function resetOrder() {
     cards.forEach((card) => {
         card.dataset.quantity = 0;
@@ -209,7 +209,7 @@ cards.forEach((card) => {
     card.dataset.quantity = quantity;
     let cartItemElement = null;
 
-    // Функция для создания элемента в корзине и удаления его при клике на кнопку удаления
+    // Function to create an item in the trash and delete it when the delete button is clicked
     function createCartItem() {
         const clone = template.content.cloneNode(true);
         const cartItem = clone.querySelector(".cart_item");
@@ -230,7 +230,7 @@ cards.forEach((card) => {
         });
     }
 
-    // Функция для обновления количества и цены в элементе корзины
+    // Function to update quantity and price in a cart item
     function updateCartItem() {
         if (!cartItemElement) return;
         const itemQty = cartItemElement.querySelector(".cart_item-qty");
@@ -312,7 +312,6 @@ function smoothScrollToBottom(element, duration = 2000) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
-        // easing (делает движение плавным)
         const ease = progress < 0.5
             ? 2 * progress * progress
             : 1 - Math.pow(-2 * progress + 2, 2) / 2;
